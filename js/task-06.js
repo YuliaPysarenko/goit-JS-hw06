@@ -1,4 +1,5 @@
-// Напиши скрипт, который при потере фокуса на инпуте (событие blur), проверяет его содержимое на правильное количество введённых символов.
+// Напиши скрипт, который при потере фокуса на инпуте (событие blur), проверяет его содержимое 
+// на правильное количество введённых символов.
 
 // <input
 //   type="text"
@@ -25,12 +26,14 @@
 
 
 const inputEl = document.querySelector(`#validation-input`);
-console.log(inputEl)
+
 
 inputEl.addEventListener(`blur`, onInputBlur);
 
+
+ console.log(inputEl)
  function onInputBlur(event) {
- if (this.getAttribute('data-length') > this.value.length) { 
+ if (this.getAttribute('data-length') > this.value.length || this.getAttribute('data-length') < this.value.length) { 
     this.classList.remove('valid');
     this.classList.add('invalid');
   } else {

@@ -17,11 +17,11 @@
 
 const formEl = document.querySelector(`.login-form`);
 const inputAllEl = document.querySelectorAll(`input`);
+const buttonEl = document.querySelector(`button`);
 
 
 formEl.addEventListener(`submit`, onFormSubmit);
-formEl.addEventListener(`submit`, onInputErrorSabmit);
-formEl.addEventListener(`submit`, onInputReset);
+
 
 
 function onFormSubmit(event) {
@@ -34,19 +34,40 @@ function onFormSubmit(event) {
     console.log(`name:`, name);
     console.log(`value:`, value);
   });
-};
 
-
- 
-function onInputErrorSabmit() {
-    inputAllEl.forEach(input => {
+  inputAllEl.forEach(input => {
     if (input.value === '') {
         alert(`Всі поля мають бути заповнені!`)
     }
-});
+    
+  });
+  
+   console.log(formEl.reset());
 };
 
-function onInputReset() {
- console.log(formEl.reset());
-};
+
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+    
+//   console.log(`prevent`);
+//     const formData = new FormData(event.currentTarget);
+
+//   formData.forEach((value, name) => {
+//     console.log(`name:`, name);
+//     console.log(`value:`, value);
+//   });
+// };
+
+// function onInputErrorSabmit() {
+//     inputAllEl.forEach(input => {
+//     if (input.value === '') {
+//         alert(`Всі поля мають бути заповнені!`)
+//     }
+// });
+// };
+
+// function onInputReset() {
+//  console.log(formEl.reset());
+// };
 

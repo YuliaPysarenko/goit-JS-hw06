@@ -17,8 +17,8 @@ const images = [
 const imagesEl = document.querySelector(`.gallery`);
 console.log(imagesEl);
 
-
 const elements = images.map(foto => {
+  
   imagesEl.insertAdjacentHTML(`beforeend`, `<li class ="item-images"><div class= "thumb">
 <img class = "images" alt = "${foto.alt}" src = "${foto.url}"></div> 
 </li>`);

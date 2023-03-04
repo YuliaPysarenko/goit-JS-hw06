@@ -11,10 +11,16 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+// function getButtonClick(event) {
+//   document.body.style.backgroundColor = getRandomHexColor(event.currentTarget);
+//   spanColorEl.textContent = getRandomHexColor(event.currentTarget.value);
+// }
+
 function getButtonClick(event) {
   document.body.style.backgroundColor = getRandomHexColor(event.currentTarget);
   spanColorEl.textContent = getRandomHexColor(event.currentTarget.value);
 }
+
 
 // Напиши скрипт, который изменяет цвета фона элемента <body> через инлайн стиль при клике на button.change-color
 //  и выводит значение цвета в span.color.
