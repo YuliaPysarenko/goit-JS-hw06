@@ -19,31 +19,56 @@ const formEl = document.querySelector(`.login-form`);
 const inputAllEl = document.querySelectorAll(`input`);
 const buttonEl = document.querySelector(`button`);
 
-
 formEl.addEventListener(`submit`, onFormSubmit);
-
-
 
 function onFormSubmit(event) {
   event.preventDefault();
-    
-  console.log(`prevent`);
-    const formData = new FormData(event.currentTarget);
 
-  formData.forEach((value, name) => {
-    console.log(`name:`, name);
-    console.log(`value:`, value);
-  });
+  
 
   inputAllEl.forEach(input => {
     if (input.value === '') {
-        alert(`Всі поля мають бути заповнені!`)
+      alert(`Всі поля мають бути заповнені!`)
+    }
+
+    else if (!input.value === '') {
+    
+      console.log(); 
     }
     
   });
   
    console.log(formEl.reset());
 };
+
+
+
+
+
+// formEl.addEventListener(`submit`, onFormSubmit);
+
+
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+    
+//   console.log(`prevent`);
+//     const formData = new FormData(event.currentTarget);
+
+//   formData.forEach((value, name) => {
+//     console.log(`name:`, name);
+//     console.log(`value:`, value);
+//   });
+
+//   inputAllEl.forEach(input => {
+//     if (input.value === '') {
+//         alert(`Всі поля мають бути заповнені!`)
+//     }
+    
+//   });
+  
+//    console.log(formEl.reset());
+// };
 
 
 

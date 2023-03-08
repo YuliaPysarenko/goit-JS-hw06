@@ -10,16 +10,18 @@ const spanOutputEl = document.querySelector(`#name-output`);
 
 inputEl.addEventListener(`input`, onInputNameChenge);
 
+
 // function onInputNameChenge(event) {
 //     spanOutputEl.textContent = event.currentTarget.value;
 // }
 
 function onInputNameChenge(event) {
-    if (inputEl) {
+    if (inputEl.value) {
 spanOutputEl.textContent = event.currentTarget.value;
     }
+
     else {
-    spanOutputEl.getBoundingClientRect = `Anonymous`;
+    spanOutputEl.textContent = `Anonymous`;
     }
     
 }

@@ -10,30 +10,39 @@ const ingredients = [
 
 const ulIngredientsEl = document.getElementById(`ingredients`);
 
+const ingredientsMap = ingredients.map(ingredient => {
+  const ingredientsEl = document.createElement(`li`);
+  ingredientsEl.classList.add(`item`);
+  ingredientsEl.textContent = ingredient;
+  return ingredientsEl;
+});
 
-const ingredientsEl = document.createElement(`li`);
-ingredientsEl.classList.add(`item`);
-ingredientsEl.textContent = 'Potatoes';
+
+ulIngredientsEl.append(...ingredientsMap);
+
+// const ingredientsEl = document.createElement(`li`);
+// ingredientsEl.classList.add(`item`);
+// ingredientsEl.textContent = 'Potatoes';
    
-const ingredientsMushroomsEl = document.createElement(`li`);
-ingredientsMushroomsEl.classList.add(`item`);
-ingredientsMushroomsEl.textContent = 'Mushrooms';
+// const ingredientsMushroomsEl = document.createElement(`li`);
+// ingredientsMushroomsEl.classList.add(`item`);
+// ingredientsMushroomsEl.textContent = 'Mushrooms';
  
-const ingredientsGarlicEl = document.createElement(`li`);
-ingredientsGarlicEl.classList.add(`item`);
-ingredientsGarlicEl.textContent = 'Garlic';
+// const ingredientsGarlicEl = document.createElement(`li`);
+// ingredientsGarlicEl.classList.add(`item`);
+// ingredientsGarlicEl.textContent = 'Garlic';
 
-const ingredientsTomatosEl = document.createElement(`li`);
-ingredientsTomatosEl.classList.add(`item`);
-ingredientsTomatosEl.textContent = 'Tomatos';
+// const ingredientsTomatosEl = document.createElement(`li`);
+// ingredientsTomatosEl.classList.add(`item`);
+// ingredientsTomatosEl.textContent = 'Tomatos';
 
-const ingredientsHerbsEl = document.createElement(`li`);
-ingredientsHerbsEl.classList.add(`item`);
-ingredientsHerbsEl.textContent = 'Herbs';
+// const ingredientsHerbsEl = document.createElement(`li`);
+// ingredientsHerbsEl.classList.add(`item`);
+// ingredientsHerbsEl.textContent = 'Herbs';
 
-const ingredientsCondimentsEl = document.createElement(`li`);
-ingredientsCondimentsEl.classList.add(`item`);
-ingredientsCondimentsEl.textContent = 'Condiments';
+// const ingredientsCondimentsEl = document.createElement(`li`);
+// ingredientsCondimentsEl.classList.add(`item`);
+// ingredientsCondimentsEl.textContent = 'Condiments';
 
-ulIngredientsEl.append(ingredientsEl, ingredientsMushroomsEl, ingredientsGarlicEl,
-  ingredientsTomatosEl, ingredientsHerbsEl, ingredientsCondimentsEl);
+// ulIngredientsEl.append(ingredientsEl, ingredientsMushroomsEl, ingredientsGarlicEl,
+//   ingredientsTomatosEl, ingredientsHerbsEl, ingredientsCondimentsEl);
