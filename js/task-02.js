@@ -20,6 +20,8 @@ const ingredientsMap = ingredients.map(ingredient => {
 
 ulIngredientsEl.append(...ingredientsMap);
 
+// ulIngredientsEl.append(...ingredientsMap);
+
 // const ingredientsEl = document.createElement(`li`);
 // ingredientsEl.classList.add(`item`);
 // ingredientsEl.textContent = 'Potatoes';

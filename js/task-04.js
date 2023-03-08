@@ -26,3 +26,9 @@ function onButtonIncrementClick() {
     valueEl.textContent = counter.counterValue;
 }
 
+// function onButtonIncrementClick() {
+//     counter.incrementClick();
+//     valueEl.textContent = counter.counterValue;
+// }
+
+

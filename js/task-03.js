@@ -23,7 +23,7 @@ const elements = images.map(image => `<li class ="item-images"><div class= "thum
 
 imagesEl.insertAdjacentHTML(`beforeend`, elements);
 
-
+// imagesEl.insertAdjacentHTML(`beforeend`, elements);
   
 
 

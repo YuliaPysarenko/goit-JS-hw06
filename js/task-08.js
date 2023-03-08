@@ -35,12 +35,11 @@ function onFormSubmit(event) {
     alert(`Всі поля мають бути заповнені!`)
   }
       
-  else if (!email.value === `` && !password.value === ``) {
     
-     console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log({ email: email.value , password:  password.value });
     event.currentTarget.reset();
       
-  }
+  
 };
 
 
@@ -73,27 +72,4 @@ function onFormSubmit(event) {
 
 
 
-// function onFormSubmit(event) {
-//   event.preventDefault();
-    
-//   console.log(`prevent`);
-//     const formData = new FormData(event.currentTarget);
-
-//   formData.forEach((value, name) => {
-//     console.log(`name:`, name);
-//     console.log(`value:`, value);
-//   });
-// };
-
-// function onInputErrorSabmit() {
-//     inputAllEl.forEach(input => {
-//     if (input.value === '') {
-//         alert(`Всі поля мають бути заповнені!`)
-//     }
-// });
-// };
-
-// function onInputReset() {
-//  console.log(formEl.reset());
-// };
 
