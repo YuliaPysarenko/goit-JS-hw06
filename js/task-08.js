@@ -19,26 +19,28 @@ const formEl = document.querySelector(`.login-form`);
 const inputAllEl = document.querySelectorAll(`input`);
 const buttonEl = document.querySelector(`button`);
 
+
+
 formEl.addEventListener(`submit`, onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
 
-  
+  const {
+    elements: { email, password }
+  } = event.currentTarget;
 
-  inputAllEl.forEach(input => {
-    if (input.value === '') {
-      alert(`Всі поля мають бути заповнені!`)
-    }
 
-    else if (!input.value === '') {
+  if (email.value === `` || password.value === ``) {
+    alert(`Всі поля мають бути заповнені!`)
+  }
+      
+  else if (!email.value === `` && !password.value === ``) {
     
-      console.log(); 
-    }
-    
-  });
-  
-   console.log(formEl.reset());
+     console.log(`Email: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
+      
+  }
 };
 
 
@@ -52,7 +54,6 @@ function onFormSubmit(event) {
 // function onFormSubmit(event) {
 //   event.preventDefault();
     
-//   console.log(`prevent`);
 //     const formData = new FormData(event.currentTarget);
 
 //   formData.forEach((value, name) => {
